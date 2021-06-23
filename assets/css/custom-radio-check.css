@@ -1,0 +1,169 @@
+
+
+/**
+ * @Main css for (custom checkbox/radio-switcher)
+ * @project     - custom checkbox/radio-switcher
+ * @author      - custom checkbox/radio-switcher
+ * @created_by  - kawsar bin siraj
+ * @created_at  - 14-12-2020
+ * @modified_by -
+ */
+
+.checkbox-wrapper > label {
+	 cursor: pointer;
+	 margin-bottom: 0;
+}
+ .checkbox-wrapper input.checkbox {
+	 display: none;
+}
+ .checkbox-wrapper input.checkbox:checked + .check-icon {
+	 border-color: var(--bs-blue);
+	 background: var(--bs-blue);
+}
+ .checkbox-wrapper input.checkbox:checked + .check-icon:before {
+	 transform: scale(1);
+	 opacity: 1;
+}
+ .checkbox-wrapper .check-icon {
+	 position: relative;
+	 display: inline-block;
+	 height: 16px;
+	 width: 16px;
+	 top: 0px;
+	 border: solid 2px #d6dce3;
+	 background-color: transparent;
+	 border-radius: 3px;
+	 transition: 0.2s all ease-in-out;
+}
+ .checkbox-wrapper .check-icon:before {
+	 content: "Yes";
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 font-weight: 900;
+	 font-size: 8px;
+	 color: #fff;
+	 text-align: center;
+	 top: 1px;
+	 left: 0;
+	 transform: scale(1.5);
+	 transition: 0.2s all ease-in-out;
+	 opacity: 0;
+}
+ .switch {
+	 position: relative;
+	 display: inline-block;
+	 width: 40px;
+	 height: 20px;
+}
+ .switch input {
+	 display: none;
+}
+ .slider {
+	 position: absolute;
+	 cursor: pointer;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-color: #ccc;
+	 -webkit-transition: 0.4s;
+	 transition: 0.4s;
+}
+ .slider:before {
+	 position: absolute;
+	 content: "";
+	 height: 14px;
+	 width: 14px;
+	 left: 3px;
+	 top: 3px;
+	 background-color: white;
+	 -webkit-transition: 0.4s;
+	 transition: 0.4s;
+}
+ input.default:checked + .slider {
+	 background-color: #444;
+}
+ input.primary:checked + .slider {
+	 background-color: #2196f3;
+}
+ input.success:checked + .slider {
+	 background-color: #8bc34a;
+}
+ input.info:checked + .slider {
+	 background-color: #3de0f5;
+}
+ input.warning:checked + .slider {
+	 background-color: #ffc107;
+}
+ input.danger:checked + .slider {
+	 background-color: #f44336;
+}
+ input:focus + .slider {
+	 box-shadow: 0 0 1px #2196f3;
+}
+ input:checked + .slider {
+	 background-color: var(--bs-blue);
+}
+ input:checked + .slider::before {
+	 left: 22px;
+}
+ .slider.round {
+	 border-radius: 50px;
+}
+ .slider.round::before {
+	 border-radius: 100%;
+}
+ .custom-radio {
+	 display: block;
+	 position: relative;
+	 padding-left: 25px;
+	 margin-bottom: 0px;
+	 cursor: pointer;
+	 font-size: 15px;
+	 -webkit-user-select: none;
+	 -moz-user-select: none;
+	 -ms-user-select: none;
+	 user-select: none;
+}
+ .custom-radio input {
+	 position: absolute;
+	 opacity: 0;
+	 cursor: pointer;
+}
+ .custom-radio input:checked ~ .check-mark {
+	 background-color: #fff;
+	 border: 2px solid var(--color-salmon);
+}
+ .custom-radio input:checked ~ .check-mark:after {
+	 display: block;
+}
+ .custom-radio:hover input ~ .check-mark {
+	 background-color: transparent;
+}
+ .custom-radio .check-mark:after {
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 width: 10px;
+	 height: 10px;
+	 border-radius: 50%;
+	 background: var(--color-salmon);
+}
+ .check-mark {
+	 position: absolute;
+	 left: 0;
+	 height: 18px;
+	 width: 18px;
+	 background-color: white;
+	 border-radius: 50%;
+	 border: 1px solid #bebebe;
+}
+ .check-mark:after {
+	 content: "";
+	 position: absolute;
+	 display: none;
+}
+ 
